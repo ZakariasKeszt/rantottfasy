@@ -11,5 +11,88 @@
     <div class="bg">
         <img src="xd.png">
     </div>
+    <p>lackonack</p>
+    <div class="container">
+    <p>#include <stdio.h></p>
+    <p>int biggest_3digit_num(int *p);</p>
+    <p>int char_count(char *p);</p>
+    <p>int starnum_generator(int *p);</p>
+    <p>int tombfeltoltes_fuggvenyben(void);</p>
+    <p>int main(void){</p>
+    <p></p>
+    <p>	//tombfeltoltes fugvenyben feladat</p>
+    <p>	printf("Az utolso szam: %o\n",fgv() );</p>
+    <p></p>
+    <p>	//legnagyobb szam tombben feladat</p>
+    <p>    int array[] = {7, 10, 11, 100, 101, 200, 201, 300, 301, 400, 401, 402, 380, 1000, 20, 21}; //402</p>
+    <p>    printf("legmagasabb haromjegyu szam: %d\n", biggest_3digit_num(array));</p>
+    <p>    </p>
+    <p>    //k-o kereses feladat</p>
+    <p>    char string[] = "sodi kafka byaleksz mokambogang lackohun"; //4o 5k</p>
+    <p>    printf("o es k betuk szama: %d\n", char_count(string));</p>
+    <p></p>
+    <p>    //csillagszamos feltoltes genyo feladat</p>
+    <p>    int csillagszamok[100];</p>
+    <p>    printf("a tomb utolso eleme: %d\n", starnum_generator(csillagszamok));</p>
+    <p>	</p>
+    <p>}</p>
+    <p></p>
+    <p></p>
+    <p>int tombfeltoltes_fuggvenyben(void)</p>
+    <p>{</p>
+    <p>    int t[100];</p>
+    <p>    int i=0;</p>
+    <p>    int x=1036;</p>
+    <p></p>
+    <p>    while(i<100)</p>
+    <p>    {</p>
+    <p></p>
+    <p>        if((x&0b101100)== 0b001100)</p>
+    <p>        {</p>
+    <p>            t[i]=x;</p>
+    <p>            i++;</p>
+    <p>        }</p>
+    <p>        x++;</p>
+    <p>        }</p>
+    <p>    return t[i-1];</p>
+    <p>}</p>
+    <p></p>
+    <p>int biggest_3digit_num(int *p){</p>
+    <p>    int ered = 0;                               //eredmeny valtozo</p>
+    <p>    while(*p){                                  //ameg a tomb nem nulla</p>
+    <p>        if(*p > 99 && *p < 1000 && *p > ered){  //haromjegyu feltetel es nagyobb mint az elozo ertek</p>
+    <p>            ered = *p;</p>
+    <p>        }        </p>
+    <p>        p++;                                    //pointer novelese</p>
+    <p>    }</p>
+    <p>    return ered;</p>
+    <p>}</p>
+    <p>int char_count(char *p){</p>
+    <p>    int count = 0;                              //szamlalo</p>
+    <p>    while(*p){                                  //ameg a tomb nem nulla</p>
+    <p>        if(*p == 'o' || *p == 'k'){             //tomb eleme o vagy k</p>
+    <p>            count++;                            </p>
+    <p>        }</p>
+    <p>        p++;                                    //pointer novelese</p>
+    <p>    }</p>
+    <p>    return count;</p>
+    <p>}</p>
+    <p></p>
+    <p>int starnum_generator(int *p){</p>
+    <p>    int i = 0;</p>
+    <p>    int n = 1;</p>
+    <p>    int num = 0;</p>
+    <p>    while(i<100){</p>
+    <p>        num = ((6*(n*n))-(6*n)+1);</p>
+    <p>        if(num>=793){</p>
+    <p>            *p = num;</p>
+    <p>            p++;</p>
+    <p>            i++;</p>
+    <p>        }</p>
+    <p>        n++;</p>
+    <p>    }</p>
+    <p>    return *(p-1);</p>
+    <p>}</p>
+    </div>
 </body>
 </html>
